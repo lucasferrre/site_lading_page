@@ -1,0 +1,229 @@
+/* ---- VARIÁVEIS E RESET GERAL ---- */
+:root {
+    --bg-color: #010103;
+    --card-bg-color: #1a1e3a; 
+    --text-color: #c0c5d1;
+    --glow-color-cyan: #00ffff;
+    --accent-color-red: #279391; 
+    --font-primary: 'Poppins', sans-serif;
+}
+
+/* ... (O reset geral e o estilo do body continuam os mesmos) ... */
+html { scroll-behavior: smooth; }
+body {
+    font-family: var(--font-primary);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    overflow-x: hidden;
+}
+.container { width: 90%; max-width: 1200px; margin: 0 auto; }
+
+
+/* ---- CABEÇALHO ---- */
+header {
+    position: absolute; /* Mudado para absolute para ficar sobre o hero */
+    top: 0;
+    width: 100%;
+    padding: 2px 0;
+    z-index: 5;
+    background:#cffbff00;
+}
+/* ... (O resto do estilo do header e logo pode continuar o mesmo) ... */
+.logo { 
+    font-size: 1.0rem;
+     font-weight: 700;
+      color: #fff; 
+      text-decoration: none; 
+      text-shadow: 0 0 5px var(--glow-color-cyan);
+ }
+
+/* ---- ADICIONE ESTA NOVA REGRA ABAIXO ---- */
+.logo img {
+    height: 100px; 
+    width: auto;  
+    vertical-align: top; 
+}
+
+
+header .container { display: flex; justify-content: space-between; align-items: center; }
+
+header nav ul { list-style: none; display: flex; gap: 30px; }
+
+header nav a { color: #fff; text-decoration: none; transition: all 0.3s ease; }
+
+header nav a:hover { color: var(--glow-color-cyan); text-shadow: 0 0 8px var(--glow-color-cyan); }
+
+
+
+.hero-video-section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden; 
+}
+
+.hero-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -2;
+}
+
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: -1;
+}
+
+
+.hero-content { 
+    max-width: 800px;
+ }
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    color: #fff; 
+    margin-bottom: 20px;
+ }
+
+.hero-content p {
+    font-size: 1.2rem; 
+    font-weight: 300; 
+    margin-bottom: 40px;
+ }
+
+.scroll-indicator span { 
+    display: block;
+    margin-bottom: 10px;
+    color: var(--glow-color-cyan);
+ }
+
+.scroll-indicator .arrow { 
+    font-size: 2rem; 
+    animation: bounce 2s infinite;
+ }
+
+
+@keyframes bounce { 
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0); } 
+    40% { transform: translateY(-15px); } 
+    60% { transform: translateY(-8px); }
+}
+
+
+
+.cards-section {
+    padding: 10px 0;
+}
+
+.section-title {
+    margin-bottom: 50px;
+    padding-bottom: 7px;
+    border-bottom: 1px solid #333;
+}
+
+.section-title h2 {
+    font-size: 2.5rem;
+    color: #fff;
+    margin-bottom: 1px;
+}
+
+.section-title span {
+    color: #888;
+}
+
+.cards-container {
+    display: flex;
+    justify-content: space-evenly; 
+    gap: 20px;
+    flex-wrap: nowrap;
+}
+.card {
+    background-color: var(--card-bg-color);
+    border-radius: 15px;
+    padding: 25px;
+    text-align: center;
+    flex-basis: calc((100% - 30px) / 3); 
+    
+    /* AUMENTE ESTE VALOR: */
+    min-width: 350px; /* Tente 350px, 400px, ou o tamanho que preferir */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+    width: 100%;       
+    height: auto;    
+    display: block;
+}
+
+.card h3 {
+    font-size: 1.5rem;
+    color: #fff;
+    margin-bottom: 5px;
+}
+
+.card h4 {
+    font-size: 1rem;
+    color: var(--glow-color-cyan);
+    margin-bottom: 15px;
+    font-weight: 400;
+}
+
+.card p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.card-button {
+    background-color: var(--accent-color-red);
+    color: #fff;
+    padding: 10px 30px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 700;
+    align-items: center;
+    text-align: center;
+    transition: background-color 0.6s ease;
+}
+
+.card-button:hover {
+    background-color: #31c0ac;
+}
+
+
+footer { 
+    text-align: center; 
+    padding: 60px 0; 
+    background-color: #000000; 
+}
+
+/* aqui é um futoer para o nome da pagina*/
+.logo-footer {
+     margin-top: 20px;
+      font-weight: 700;
+       color: #555;
+ }
+
+
+@media (max-width: 768px) {
+    .cards-container { flex-direction: column; align-items: center; }
+}
