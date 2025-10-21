@@ -45,7 +45,12 @@ header {
 }
 
 
-header .container { display: flex; justify-content: space-between; align-items: center; }
+header .container {
+     display: flex;
+    justify-content: 
+    space-between; 
+    align-items: center;
+}
 
 header nav ul { list-style: none; display: flex; gap: 30px; }
 
@@ -55,7 +60,7 @@ header nav a:hover { color: var(--glow-color-cyan); text-shadow: 0 0 8px var(--g
 
 
 
-.hero-video-section {
+.video-section {
     position: relative;
     width: 100%;
     height: 100vh;
@@ -66,7 +71,7 @@ header nav a:hover { color: var(--glow-color-cyan); text-shadow: 0 0 8px var(--g
     overflow: hidden; 
 }
 
-.hero-video {
+.video-fundo {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -78,7 +83,7 @@ header nav a:hover { color: var(--glow-color-cyan); text-shadow: 0 0 8px var(--g
     z-index: -2;
 }
 
-.video-overlay {
+.sobreposicao-video {
     position: absolute;
     top: 0;
     left: 0;
@@ -89,29 +94,29 @@ header nav a:hover { color: var(--glow-color-cyan); text-shadow: 0 0 8px var(--g
 }
 
 
-.hero-content { 
+.introducao { 
     max-width: 800px;
  }
 
-.hero-content h1 {
+.introducao h1 {
     font-size: 3.5rem;
     color: #fff; 
     margin-bottom: 20px;
  }
 
-.hero-content p {
+.introducao p {
     font-size: 1.2rem; 
     font-weight: 300; 
     margin-bottom: 40px;
  }
 
-.scroll-indicator span { 
+.indicador-rolagem span { 
     display: block;
     margin-bottom: 10px;
     color: var(--glow-color-cyan);
  }
 
-.scroll-indicator .arrow { 
+.indicador-rolagem .arrow { 
     font-size: 2rem; 
     animation: bounce 2s infinite;
  }
@@ -157,9 +162,7 @@ header nav a:hover { color: var(--glow-color-cyan); text-shadow: 0 0 8px var(--g
     padding: 25px;
     text-align: center;
     flex-basis: calc((100% - 30px) / 3); 
-    
-    /* AUMENTE ESTE VALOR: */
-    min-width: 350px; /* Tente 350px, 400px, ou o tamanho que preferir */
+    min-width: 350px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -223,7 +226,7 @@ footer {
        color: #555;
  }
 
-
+/* responsividade simples*/
 @media (max-width: 768px) {
     .cards-container { flex-direction: column; align-items: center; }
 }
