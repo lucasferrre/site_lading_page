@@ -1,4 +1,4 @@
-/* ---- VARIÁVEIS E RESET GERAL ---- */
+/*  VARIÁVEIS  */
 :root {
     --bg-color: #010103;
     --card-bg-color: #1a1e3a; 
@@ -8,7 +8,7 @@
     --font-primary: 'Poppins', sans-serif;
 }
 
-/* ... (O reset geral e o estilo do body continuam os mesmos) ... */
+
 html { scroll-behavior: smooth; }
 body {
     font-family: var(--font-primary);
@@ -19,16 +19,16 @@ body {
 .container { width: 90%; max-width: 1200px; margin: 0 auto; }
 
 
-/* ---- CABEÇALHO ---- */
+
 header {
-    position: absolute; /* Mudado para absolute para ficar sobre o hero */
+    position: absolute; 
     top: 0;
     width: 100%;
     padding: 2px 0;
     z-index: 5;
     background:#cffbff00;
 }
-/* ... (O resto do estilo do header e logo pode continuar o mesmo) ... */
+
 .logo { 
     font-size: 1.0rem;
      font-weight: 700;
@@ -37,7 +37,6 @@ header {
       text-shadow: 0 0 5px var(--glow-color-cyan);
  }
 
-/* ---- ADICIONE ESTA NOVA REGRA ABAIXO ---- */
 .logo img {
     height: 100px; 
     width: auto;  
@@ -52,11 +51,22 @@ header .container {
     align-items: center;
 }
 
-header nav ul { list-style: none; display: flex; gap: 30px; }
+header nav ul { 
+    list-style: none; 
+    display: flex; 
+    gap: 30px; 
+}
 
-header nav a { color: #fff; text-decoration: none; transition: all 0.3s ease; }
+header nav a { 
+    color: #fff; 
+    text-decoration: none; 
+    transition: all 0.3s ease; 
+}
 
-header nav a:hover { color: var(--glow-color-cyan); text-shadow: 0 0 8px var(--glow-color-cyan); }
+header nav a:hover { 
+    color: var(--glow-color-cyan); 
+    text-shadow: 0 0 8px var(--glow-color-cyan); 
+}
 
 
 
