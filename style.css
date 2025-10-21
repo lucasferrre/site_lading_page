@@ -171,7 +171,7 @@ header nav a:hover {
     padding: 25px;
     text-align: center;
     flex-basis: calc((100% - 30px) / 3); 
-    min-width: 350px;
+    min-width: 340px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
